@@ -153,9 +153,21 @@ button, input, select, textarea {
 /* Common Layout Elements */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 2.5rem;
+  }
 }
 
 .heading-xl {

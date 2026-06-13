@@ -149,13 +149,14 @@ export default function Footer() {
         .footer-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 2.5rem;
-          margin-bottom: 3.5rem;
+          gap: 3rem;
+          margin-bottom: 3rem;
         }
 
         @media (min-width: 768px) {
           .footer-grid {
-            grid-template-columns: 2fr 1fr 1fr 2fr;
+            grid-template-columns: 1.8fr 1fr 1fr 1.8fr;
+            gap: 3.5rem;
           }
         }
 
@@ -200,10 +201,24 @@ export default function Footer() {
         .footer-title {
           font-family: var(--font-heading);
           color: white;
-          font-size: 1.1rem;
-          font-weight: 600;
+          font-size: 1rem;
+          font-weight: 700;
           margin-bottom: 1.25rem;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
           position: relative;
+          padding-bottom: 0.625rem;
+        }
+
+        .footer-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 28px;
+          height: 2px;
+          background: var(--primary);
+          border-radius: 999px;
         }
 
         .footer-links {
@@ -285,7 +300,11 @@ export default function Footer() {
           .footer-bottom-flex {
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             text-align: left;
+          }
+          .footer-legal-links {
+            justify-content: flex-end;
           }
         }
 
